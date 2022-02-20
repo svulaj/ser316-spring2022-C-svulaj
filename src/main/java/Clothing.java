@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+Class: Clothing
+
+Description: This class is designed to be able to hold the information associated
+			 with clothing articles for the bears customers with to add.
+			 main features are: creating clothing & comparing clothing.
+*/
+
 public class Clothing implements Comparable<Clothing> {
     public double price;
     public String Description;
