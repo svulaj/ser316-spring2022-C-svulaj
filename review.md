@@ -1,14 +1,6 @@
 | ID #  | Location  | Problem Description   | Problem: Category | Problem: Severity  |
 |---|---|---|---|--|
-|1||File: all java files
-Line#: Whole file
-|   |  |
-
-
-
-
-
-|   |   |   |   |  |
+| 1 | File: all java files, Line#: Whole file |Template for header of the file does not follow Header template formats as described by client/professor. | CG 1  | Low |
 |   |   |   |   |  |
 
 
