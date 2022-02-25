@@ -18,7 +18,7 @@ public class GivenWhiteBox {
 
 /**
  * The change that needed to happen here was that the tax was not being applied
- * so to fix this issue i added in one line of code one line#30 to collect the tax value.
+ * so to fix this issue i added in one line of code one line#32 to collect the tax value.
  * and
  * one line of code on line#36 to add the tax cost to the cost retrieved from the bear in question.
  * 
