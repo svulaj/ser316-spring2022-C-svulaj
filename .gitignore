@@ -1,8 +1,7 @@
 bin
 build
-.project
-.gradle 
-.git
-.classpath
-**/.DS_Store
+*.project
+*.gradle
+*.classpath
+*.DS_Store
 Config/.DS_Store
