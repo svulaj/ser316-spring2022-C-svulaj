@@ -128,13 +128,13 @@ public class BearWorkshop implements BearWorkshopInterface{
      * TODO: test me and fix me in assignment 3
      */
     @Override
-    public boolean addBear(Bear bear)       {
-        if (this.BearCart.add(bear))        {
+    public boolean addBear(Bear bear){
+        if (this.BearCart.add(bear)){
             return true;
-                                            }
-        else                                {
+        }
+        else{
             return false;
-                                            }
+        }
     }
 
     // Simple means to remove a bear from the shopping cart
