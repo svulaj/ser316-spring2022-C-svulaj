@@ -91,6 +91,8 @@ public class GivenWhiteBox {
      * NEW: This test is the same as the previous but now has edge coverage to 
      * 		test whether or not the if-condition for adding the noiseMaker
      * 		cost to the individual bears total cost. 
+     * 
+     * With the addition of this test node coverage of nodes 38-64 has been achieved.
      */
     
     @Test
