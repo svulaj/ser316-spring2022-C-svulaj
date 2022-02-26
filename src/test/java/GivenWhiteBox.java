@@ -120,4 +120,53 @@ public class GivenWhiteBox {
          assertEquals(81.07, ans, 0.5);
     }
     
+    
+    /**
+     * This test is for node coverage of method calculateTax.
+     * 		Specifically nodes: 99-122
+     * 
+     * This test creates multiple bears all using different taxes
+     * 		(different workShops from different states).
+     */
+    
+    @Test
+    public void calculateTax_nodeTest() {
+        
+    	BearWorkshop shop0 = new BearWorkshop("AZ");
+    	Double ans = shop0.calculateTax();
+        assertEquals(1.07, ans, 0.5);
+    	
+        
+    	BearWorkshop shop1 = new BearWorkshop("NY");
+    	Double ans1 = shop1.calculateTax();
+        assertEquals(1.09, ans1, 0.5);
+    	
+    	
+    	BearWorkshop shop2 = new BearWorkshop("VA");
+    	Double ans2 = shop2.calculateTax();
+        assertEquals(1.05, ans2, 0.5);
+    	
+    	
+    	BearWorkshop shop3 = new BearWorkshop("DC");
+    	Double ans3 = shop3.calculateTax();
+        assertEquals(1.105, ans3, 0.5);
+    	
+    	
+    	BearWorkshop shop4 = new BearWorkshop("CA");
+    	Double ans4 = shop4.calculateTax();
+        assertEquals(1.1, ans4, 0.5);
+        
+        
+        BearWorkshop shop5 = new BearWorkshop("");
+    	Double ans5 = shop5.calculateTax();
+        assertEquals(1.05, ans5, 0.5);
+        
+        
+         
+         //Double ans = shop0.calculateTax();
+         //assertEquals(81.07, ans, 0.5);
+    }
+    
+    
+    
 }
