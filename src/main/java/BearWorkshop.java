@@ -33,6 +33,7 @@ public class BearWorkshop implements BearWorkshopInterface{
      * @return double representation of bear cost
      * TODO: test me and fix me in assignment 3
      */
+    
     @Override
     public double getCost(Bear bear) {
         Collections.sort(bear.clothing);
@@ -55,12 +56,13 @@ public class BearWorkshop implements BearWorkshopInterface{
         if (bear.ink != null) {
             bear.price += bear.ink.price;
         }
-
+        
+        
         bear.price += bear.stuff.price;
         bear.price += bear.casing.priceModifier;
 
         return bear.price;
-    }
+    } 
 
     // Function to get the raw cost of a bear without any discounts
    // TODO: test me and fix me in assignment 3
