@@ -127,6 +127,8 @@ public class GivenWhiteBox {
      * 
      * This test creates multiple bears all using different taxes
      * 		(different workShops from different states).
+     * 		This includes edge coverage by covering each switch branch within
+     * 		the method.
      */
     
     @Test
