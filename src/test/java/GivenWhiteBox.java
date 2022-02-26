@@ -163,10 +163,6 @@ public class GivenWhiteBox {
     	Double ans5 = shop5.calculateTax();
         assertEquals(1.05, ans5, 0.5);
         
-        
-         
-         //Double ans = shop0.calculateTax();
-         //assertEquals(81.07, ans, 0.5);
     }
     
     
