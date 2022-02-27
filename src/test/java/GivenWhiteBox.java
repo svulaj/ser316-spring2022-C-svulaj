@@ -123,7 +123,7 @@ public class GivenWhiteBox {
     
     /**
      * This test is for node coverage of method calculateTax.
-     * 		Specifically nodes: 99-122
+     * 		Specifically nodes----> 99-122
      * 
      * This test creates multiple bears all using different taxes
      * 		(different workShops from different states).
@@ -163,6 +163,42 @@ public class GivenWhiteBox {
     	Double ans5 = shop5.calculateTax();
         assertEquals(1.05, ans5, 0.5);
         
+    }
+    
+    
+    /**
+     * This test, tests The method checkout() within bearWorkShop.java.
+     * Specifically it tests nodes ----> 66 - 70. 
+     * This test is used to cover the edge case where a child and parent are both too young.
+     * 
+     * This is done simply by setting the ages of the child and parent below the accepted required 
+     * 		age to purchase bears from the shop.
+     * 
+     * Note --> Getters and setters had to be created in order to make this happen. Specifically 
+     * 		getters and setters in bearWorkShop to retrieve the classes member variable "customer".
+     * 
+     * 		Second, getters and setters within the customer class to retrieve the customers parents
+     * 		& the age of the customers/parents.
+     */
+    
+    @Test
+    public void checkout_test() {
+        // One Student
+    	BearWorkshop shop = new BearWorkshop("AZ");
+        
+    	//Create child and parent
+        Customer custo = new Customer("AZ");
+        Customer parent1 = new Customer("AZ");
+        
+        //sets age of child
+        shop.setCustomer(custo);
+        shop.getCustomer().setAge(12);
+        //sets parent to child & sets the age of that parent
+        shop.getCustomer().setParent(parent1);
+        shop.getCustomer().getParent().setAge(17);
+        
+        double ans = shop.checkout();
+        assertEquals(-1.0, ans, 1.0);
     }
     
     
