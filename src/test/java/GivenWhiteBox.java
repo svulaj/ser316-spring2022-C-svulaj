@@ -229,6 +229,48 @@ public class GivenWhiteBox {
          assertEquals(85.21, ans, 0.5);
     }
     
+    /**
+     * This test simply test the nodes---> 147 - 150.
+     * This covers the functionality of a bear being properly 
+     * 		removed from a customers shopping cart.
+     */
+    
+    @Test
+    public void remove_test1() {
+    	 oneBear = new BearWorkshop("AZ");
+    	 Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);//$41
+         Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);//$41
+         
+         oneBear.addBear(testbear0);
+         oneBear.addBear(testbear1);
+         
+         boolean check = oneBear.removeBear(testbear0);       
+         assertEquals(true, check);
+         
+    }
+    
+    /**
+     * This test simply test the nodes---> 151 - 153.
+     * This covers the functionality of a bear being properly 
+     * 		being checked if it was in a cart & if it wasn't
+     * 		then it return false.
+     */
+    
+    @Test
+    public void remove_test2() {
+    	 oneBear = new BearWorkshop();
+    	 Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);//$41
+         Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);//$41
+         Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);//$41
+         
+         oneBear.addBear(testbear0);
+         oneBear.addBear(testbear1);
+         
+         boolean check = oneBear.removeBear(testbear2);       
+         assertEquals(false, check);
+         
+    }
+    
     
     
 }
