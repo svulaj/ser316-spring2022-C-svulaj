@@ -180,7 +180,7 @@ public class GivenWhiteBox {
      * 		Second, getters and setters within the customer class to retrieve the customers parents
      * 		& the age of the customers/parents.
      */
-    
+     
     @Test
     public void checkout_test() {
         // One Student
@@ -199,6 +199,34 @@ public class GivenWhiteBox {
         
         double ans = shop.checkout();
         assertEquals(-1.0, ans, 1.0);
+    }
+    
+    /**
+     * This method covers the nodes ---> 161 - 191 & the edge coverage of 
+     * 		having more than one bear in the cart.
+     * 
+     * Note: A lot of re-factoring had to take place in the method checkout()
+     * 		 within the bearWorkShop.java file. All changes are documented within the method.
+     * 
+     * 3 bears in the cart without any accessories = $126.21, with savings calculated
+     * 		(E.g. -$41) = $85.21
+     */
+    
+    @Test
+    public void checkout_test1() {
+        // One Student
+        oneBear = new BearWorkshop("AZ");
+        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);//$41
+        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);//$41
+        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);//$41
+
+
+        oneBear.addBear(testbear0);
+        oneBear.addBear(testbear1);
+        oneBear.addBear(testbear2);
+        
+        Double ans = oneBear.checkout();
+         assertEquals(85.21, ans, 0.5);
     }
     
     
