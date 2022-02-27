@@ -6,7 +6,7 @@ import java.util.*;
 public class BearWorkshop implements BearWorkshopInterface{
     // Workshop has a collection of bears
     // Workshop has a customer
-    Customer customer;
+    private Customer customer;
     List<Bear> BearCart;
 
     /**
@@ -16,13 +16,21 @@ public class BearWorkshop implements BearWorkshopInterface{
         this("AZ");
     }
 
-    /**
+    public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	/**
      * This is a parameterized ctor for a BearWorkshop
      * @param state customer is in
      */
     public BearWorkshop(String state) {
         BearCart = new LinkedList<>();
-        customer = new Customer(state);
+        setCustomer(new Customer(state));
     }
 
     /**
@@ -98,7 +106,7 @@ public class BearWorkshop implements BearWorkshopInterface{
      */
     public double calculateTax() {
         double tax;
-        switch (customer.state) {
+        switch (getCustomer().state) {
             case "AZ":
                 tax = 1.07;
                 break;
@@ -156,8 +164,8 @@ public class BearWorkshop implements BearWorkshopInterface{
      */
     @Override
     public double checkout() {
-        if (this.customer.age <= 13) {
-            if (this.customer.parent.age < 18)
+        if (this.getCustomer().age <= 13) {
+            if (this.getCustomer().getParent().age < 18)
                 System.out.println("Guardian is too young");
                 return -1;
         }
@@ -171,7 +179,7 @@ public class BearWorkshop implements BearWorkshopInterface{
         }
 
 
-        double savings = 0;
+        //double savings = 0;
         // calculate total cost
         double rawCost = 0;
         for (Bear bear: BearCart) {
@@ -183,12 +191,12 @@ public class BearWorkshop implements BearWorkshopInterface{
         for (Bear bear: this.BearCart) {
             cost += this.getCost(bear);
         }
-        savings += rawCost - cost; // calc delta between raw and prorated cost
+        //savings += rawCost - cost; // calc delta between raw and prorated cost
 
         List<Bear> nonFreeBears = new LinkedList<>();
-        int counter = 0;
+        //int counter = 0;
         int numberOfFreeBearsInBearCart = BearCart.size() / 3;
-        double discountedCost = 0;
+        //double discountedCost = 0;
         Bear freeBear = null;
 
         for (int count = 0; count <= numberOfFreeBearsInBearCart; ++count) {
