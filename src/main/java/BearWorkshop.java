@@ -137,12 +137,9 @@ public class BearWorkshop implements BearWorkshopInterface{
      */
     @Override
     public boolean addBear(Bear bear){
-        if (this.BearCart.add(bear)){
+        this.BearCart.add(bear);
             return true;
-        }
-        else{
-            return false;
-        }
+       
     }
 
     // Simple means to remove a bear from the shopping cart
@@ -223,7 +220,7 @@ public class BearWorkshop implements BearWorkshopInterface{
     	
     	// calculate the 10% savings of bears that have more than 10 accessories
     	double noiseMakerSize;
-    	double clothingSize;
+    	//double clothingSize;
 //=======================================================================================================
     	// calculates the savings of clothing
     	//loops through bears
@@ -234,7 +231,7 @@ public class BearWorkshop implements BearWorkshopInterface{
     		//test spot
     		embroiderySize = 0;
     		totalAccessories = 0;
-    		
+    		 
     		numOfClothes = 0;
     		
     		Collections.sort(this.BearCart.get(i).clothing);
@@ -351,8 +348,8 @@ public class BearWorkshop implements BearWorkshopInterface{
 	Collections.sort(this.BearCart);
 	
 	for(int i = 0; i < this.BearCart.size() / 3; i++) {
-		
-		double iBearPrice = this.BearCart.get(i).price;
+		 
+		//double iBearPrice = this.BearCart.get(i).price;
 		totalSavings += this.BearCart.get(i).price;
 	
 	}
