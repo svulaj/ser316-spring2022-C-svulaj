@@ -2,7 +2,7 @@ package main.java;
 
 import main.java.Stuffing.stuffing;
 import java.util.LinkedList;
-
+//cool
 public class Bear implements Comparable<Bear>{
     public Casing casing;
     public Stuffing stuff;
