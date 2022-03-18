@@ -9,13 +9,21 @@ public class Customer {
     int age;
 
     // customer has a name and a customer id
-    Customer parent;
+    private Customer parent;
     String customer_id;
 
     // Customer lives in a state
     public String state;
 
-    /**
+    public Customer getParent() {
+		return parent;
+	}
+
+	public void setParent(Customer parent) {
+		this.parent = parent;
+	}
+
+	/**
      * Default ctor with state
      */
     public Customer(String state) {
@@ -29,12 +37,22 @@ public class Customer {
      * @param custumer reference to guardian or null
      */
     public Customer(int age, String state, Customer custumer) {
-        this.parent = custumer;
+        this.setParent(custumer);
         this.age = age;
         this.customer_id = UUID.randomUUID().toString();
 
         this.state = state;
     }
+    
+    public int getCustomerAge() {
+		return age;
+    	
+    }
+    
+    public void setAge(int ageOfCusto){
+    	age = ageOfCusto;
+    }
+    
 
 
 
