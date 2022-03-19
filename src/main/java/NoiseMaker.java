@@ -11,8 +11,13 @@ public class NoiseMaker {
         this("Default Noise", "I wuv you", Location.CENTERBODY);
     }
 
-    public NoiseMaker(String label, String recording,
-                      Location location) {
+    /**
+     * Description: constructor that takes in said params.
+     * @param label Is what's written on the bear.
+     * @param recording Is what the bear says.
+     * @param location Is the location where the recording is on the bear.
+     */
+    public NoiseMaker(String label, String recording, Location location) {
         this.label = label;
         this.recording = recording;
         this.spot = location;
@@ -27,10 +32,7 @@ public class NoiseMaker {
         }
     }
 
-
     public enum Location {
         RIGHT_HAND, LEFT_HAND, RIGHT_FOOT, LEFT_FOOT, CENTERBODY
     }
 }
-
-

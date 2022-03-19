@@ -16,14 +16,14 @@ public class Customer {
     public String state;
 
     public Customer getParent() {
-		return parent;
-	}
+        return parent;
+    }
 
-	public void setParent(Customer parent) {
-		this.parent = parent;
-	}
+    public void setParent(Customer parent) {
+        this.parent = parent;
+    }
 
-	/**
+    /**
      * Default ctor with state
      */
     public Customer(String state) {
@@ -33,7 +33,8 @@ public class Customer {
 
     /**
      * Parameterized ctor for Customers
-     * @param age int age of customer
+     * 
+     * @param age      int age of customer
      * @param custumer reference to guardian or null
      */
     public Customer(int age, String state, Customer custumer) {
@@ -43,17 +44,14 @@ public class Customer {
 
         this.state = state;
     }
-    
+
     public int getCustomerAge() {
-		return age;
-    	
-    }
-    
-    public void setAge(int ageOfCusto){
-    	age = ageOfCusto;
-    }
-    
+        return age;
 
+    }
 
+    public void setAge(int ageOfCusto) {
+        age = ageOfCusto;
+    }
 
 }

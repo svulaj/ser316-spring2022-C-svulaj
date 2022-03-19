@@ -3,10 +3,10 @@ package main.java;
 import main.java.Stuffing.stuffing;
 import java.util.LinkedList;
 
-public class Bear implements Comparable<Bear>{
+public class Bear implements Comparable<Bear> {
     public Casing casing;
     public Stuffing stuff;
-    public Embroidery ink; 
+    public Embroidery ink;
     public LinkedList<NoiseMaker> noisemakers; // accessory
     public LinkedList<Clothing> clothing; // accessory
     public double price;
@@ -15,7 +15,9 @@ public class Bear implements Comparable<Bear>{
     // bear has a tattoo/emroider or not (opt)
     // bear has a noisemaker (opt)
 
-
+    /**
+     * Bear object constructor. This creates a basic bear with. 
+     */
     public Bear() {
         this.casing = new Casing();
         this.stuff = new Stuffing(stuffing.BASE);
@@ -24,7 +26,11 @@ public class Bear implements Comparable<Bear>{
         ink = new Embroidery("");
         price = 0;
     }
-
+    /**
+     * bear constructor with option for stuffing input.
+     * 
+     * @param stuff is the stuffing you put in the bear.
+     */
     public Bear(stuffing stuff) {
         this.casing = new Casing();
         this.stuff = new Stuffing(stuff);
@@ -38,11 +44,16 @@ public class Bear implements Comparable<Bear>{
         this.price = incomingPrice;
     }
 
+    /**
+     * Description: adds a noisemaker.
+     * @param noise Is the sound the noisemaker makes.
+     * @return Returns true if the spot is not taken.
+     */
     public boolean addNoise(NoiseMaker noise) {
         if (this.noisemakers.size() >= 5) {
             return false;
         } else {
-            for (NoiseMaker noisemaker: noisemakers) {
+            for (NoiseMaker noisemaker : noisemakers) {
                 if (noise.spot == noisemaker.spot) {
                     return false;
                 }

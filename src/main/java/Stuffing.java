@@ -2,15 +2,17 @@ package main.java;
 
 public class Stuffing {
     public enum stuffing {
-        BASE,
-        DOWN,
-        FOAM
+        BASE, DOWN, FOAM
     }
 
     stuffing polyStuffing;
     int price;
 
-    public Stuffing (stuffing interiorStuffing) {
+    /**
+     * Description: constructor for stuffing.
+     * @param interiorStuffing Is what the stuffing material is.
+     */
+    public Stuffing(stuffing interiorStuffing) {
 
         switch (interiorStuffing) {
             case BASE:
