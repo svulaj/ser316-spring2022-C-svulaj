@@ -15,7 +15,7 @@ public class Clothing implements Comparable<Clothing> {
     public Clothing(double price, String descr) {
         this.price = price;
         //Useless field. Never read.
-//        this.description = descr;
+        //this.description = descr;
     }
     // Compare method now is able to do a proper price comparison
     public int compareTo(Clothing clothes) {

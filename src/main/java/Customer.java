@@ -11,7 +11,7 @@ public class Customer {
     // customer has a name and a customer id
     private Customer parent;
     //Never read, removing from class
-//    String customer_id;
+    //String customer_id;
 
     // Customer lives in a state
     public String state;
@@ -25,7 +25,7 @@ public class Customer {
     }
 
     /**
-     * Default ctor with state
+     * Default ctor with state.
      */
     public Customer(String state) {
         this.state = state;
@@ -33,15 +33,15 @@ public class Customer {
     }
 
     /**
-     * Parameterized ctor for Customers
+     * Parameterized ctor for Customers.
      * 
-     * @param age      int age of customer
-     * @param custumer reference to guardian or null
+     * @param age      int age of customer.
+     * @param custumer reference to guardian or null.
      */
     public Customer(int age, String state, Customer custumer) {
         this.setParent(custumer);
         this.age = age;
-//        this.customer_id = UUID.randomUUID().toString();
+        //this.customer_id = UUID.randomUUID().toString();
 
         this.state = state;
     }

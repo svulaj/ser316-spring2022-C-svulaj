@@ -195,19 +195,15 @@ public class BearWorkshop implements BearWorkshopInterface {
      * - Bears are Buy 2 bears, get a third one free. It is always the cheapest bear
      * that is free. The price here is meant when all discounts for a single bear
      * are applied
-     * 
      * - It is 10% off the cost of a bear when a single bear has 10 or more
      * accessories (anything on a bear is an accessory) that the customer pays for
      * (so if clothes are free these do not count).
-     * 
      * - Clothes are buy 2, get one free on each bear. Always the cheapest clothes
      * are free. So if a bear has 6 clothes, then the two cheapest ones will be free
      * and it would count as 4 accessories (see above).
-     * 
      * - Inking on a specific bear is free if and only if the bear without discounts
      * applied to it costs more than $70.
-     * 
-     * TIP: the implemented savings method in the BearWorkshop1-5 do not use the
+     * - TIP: the implemented savings method in the BearWorkshop1-5 do not use the
      * getCost method implemented in this base class. They implement their own
      * savings calculation All of them do however use the getRawCost method
      * implemented in this base class. EXAMPLE: You buy 3 bears, one bear has 3
@@ -234,8 +230,8 @@ public class BearWorkshop implements BearWorkshopInterface {
         // calculate the 10% savings of bears that have more than 10 accessories
         double noiseMakerSize;
         // double clothingSize;
-//==========================================================
-//=============================================
+        //==========================================================
+        //=============================================
         // calculates the savings of clothing
         // loops through bears
         for (int i = 0; i < this.BearCart.size(); i++) {
@@ -280,8 +276,8 @@ public class BearWorkshop implements BearWorkshopInterface {
             // Sets the cost of a bear with
             // this.BearCart.get(i).setPrice(this.getRawCost(BearCart.get(i)) -
             // indivSavings);
-//==============================================
-//=========================================================
+            //==============================================
+            //=========================================================
             // Embroidery discount section
 
             // If a embroidery exists
@@ -323,9 +319,9 @@ public class BearWorkshop implements BearWorkshopInterface {
             double currBearPricetwo = this.BearCart.get(i).price;
             System.out.println("===========================================================");
 
-//====================================
-//===================================================================
-// calculate the 10% savings of bears that have more than 10 accessories
+            //====================================
+            //===================================================================
+            // calculate the 10% savings of bears that have more than 10 accessories
             // double noiseMakerSize;
             // double clothingSize;
 
@@ -342,7 +338,8 @@ public class BearWorkshop implements BearWorkshopInterface {
                 System.out.println("exceeds 10");
                 // used for debugging
                 currBearPrice = this.BearCart.get(i).price;
-                double savingsOfaccessories = this.BearCart.get(i).price - (this.BearCart.get(i).price * 0.1);
+                double savingsOfaccessories = this.BearCart.get(i).price - 
+                        (this.BearCart.get(i).price * 0.1);
                 totalSavings += (this.BearCart.get(i).price * 0.1);
                 System.out.println("Discounted bear price = " + savingsOfaccessories);
 
@@ -356,10 +353,9 @@ public class BearWorkshop implements BearWorkshopInterface {
 
         }
         System.out.println("===========================================================");
-
-//=======================================================================================================	 
-
-//buy 2 get one free section
+        //================================================================
+        //=======================================	 
+        //buy 2 get one free section
         Collections.sort(this.BearCart);
 
         for (int i = 0; i < this.BearCart.size() / 3; i++) {
