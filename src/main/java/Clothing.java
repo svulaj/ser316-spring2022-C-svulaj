@@ -17,7 +17,7 @@ public class Clothing implements Comparable<Clothing> {
         //Useless field. Never read.
 //        this.description = descr;
     }
-
+    // Compare method now is able to do a proper price comparison
     public int compareTo(Clothing clothes) {
         if (clothes.price > this.price) {
             return 1;//Made change to double.compare instead of just compare
@@ -27,7 +27,7 @@ public class Clothing implements Comparable<Clothing> {
             return 0;
         }
     }
-    
+    // Added a new equals method to override the java library equals method to fit our needs
     @Override
     public boolean equals(Object o) {
         return o == this;

@@ -62,7 +62,7 @@ public class Bear implements Comparable<Bear> {
             return true;
         }
     }
-
+    // Compare method now is able to do a proper price comparison
     @Override
     public int compareTo(Bear bear) {
         if (this.price < bear.price) {
@@ -73,6 +73,7 @@ public class Bear implements Comparable<Bear> {
             return 0;
         }
     }
+    // Added a new equals method to override the java library equals method to fit our needs
     @Override
     public boolean equals(Object o) {
         return o == this;
