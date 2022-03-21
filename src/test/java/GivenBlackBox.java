@@ -78,7 +78,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        oneBear.addBear(new Bear(Stuffing.stuffing.BASE)); // $30 stuffing + $1 casing -- should be no savings at all
+        oneBear.addBear(new Bear(Stuffing.Stuffs.BASE)); // $30 stuffing + $1 casing -- should be no savings at all
         oneBearExpected = 0.00; // no savings since no clothing
 
         Double ans = oneBear.calculateSavings();
@@ -95,9 +95,9 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        threeBears.addBear(new Bear(Stuffing.stuffing.BASE)); // this is the cheapest one
-        threeBears.addBear(new Bear(Stuffing.stuffing.DOWN));
-        threeBears.addBear(new Bear(Stuffing.stuffing.FOAM));
+        threeBears.addBear(new Bear(Stuffing.Stuffs.BASE)); // this is the cheapest one
+        threeBears.addBear(new Bear(Stuffing.Stuffs.DOWN));
+        threeBears.addBear(new Bear(Stuffing.Stuffs.FOAM));
         threeBearsExpected = 31.00;
 
         Double ans = threeBears.calculateSavings();
@@ -114,7 +114,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        Bear customBear = new Bear(Stuffing.stuffing.BASE); // $31
+        Bear customBear = new Bear(Stuffing.Stuffs.BASE); // $31
         bears.addBear(customBear);
 
         customBear.clothing.add(new Clothing(4, "Hat")); // $35
@@ -148,10 +148,10 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear2 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear3 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear4 = new Bear(Stuffing.Stuffs.DOWN);// $41
         // Bear testbear5 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear6 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear7 = new Bear(Stuffing.stuffing.DOWN);//$41
@@ -182,13 +182,13 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear5 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear6 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear7 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear2 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear3 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear4 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear5 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear6 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear7 = new Bear(Stuffing.Stuffs.DOWN);// $41
         // Bear testbear8 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear9 = new Bear(Stuffing.stuffing.DOWN);//$41
 
@@ -216,16 +216,16 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);// $41 -
-        Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear5 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear6 = new Bear(Stuffing.stuffing.DOWN);// $41 -
-        Bear testbear7 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear8 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear9 = new Bear(Stuffing.stuffing.DOWN);// $41 -
-        Bear testbear10 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear2 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear3 = new Bear(Stuffing.Stuffs.DOWN);// $41 -
+        Bear testbear4 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear5 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear6 = new Bear(Stuffing.Stuffs.DOWN);// $41 -
+        Bear testbear7 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear8 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear9 = new Bear(Stuffing.Stuffs.DOWN);// $41 -
+        Bear testbear10 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         workshop.addBear(testbear1);
         workshop.addBear(testbear2);
@@ -252,7 +252,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         // Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);//$41
@@ -299,7 +299,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         // Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);//$41
@@ -347,7 +347,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         // Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear3 = new Bear(Stuffing.stuffing.DOWN);//$41
         // Bear testbear4 = new Bear(Stuffing.stuffing.DOWN);//$41
@@ -398,7 +398,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         workshop.addBear(testbear1);
 
@@ -416,7 +416,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         workshop.addBear(testbear1);
 
@@ -446,7 +446,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         workshop.addBear(testbear1);
 
@@ -482,7 +482,7 @@ public class GivenBlackBox {
             workshop = createBearWorkshop("DC");
         } catch (Exception e) {
         }
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         workshop.addBear(testbear1);
 
@@ -521,7 +521,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         workshop.addBear(testbear1);
 
         testbear1.price = 71;
@@ -542,7 +542,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         workshop.addBear(testbear1);
 
         testbear1.price = 65;
@@ -563,7 +563,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         workshop.addBear(testbear1);
 
         Clothing cloth0 = new Clothing(20, "R shoe");
@@ -588,7 +588,7 @@ public class GivenBlackBox {
         } catch (Exception e) {
         }
 
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
         workshop.addBear(testbear1);
 
         Clothing cloth0 = new Clothing(4, "R shoe");

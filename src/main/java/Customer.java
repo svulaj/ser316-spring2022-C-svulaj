@@ -10,7 +10,8 @@ public class Customer {
 
     // customer has a name and a customer id
     private Customer parent;
-    String customer_id;
+    //Never read, removing from class
+//    String customer_id;
 
     // Customer lives in a state
     public String state;
@@ -40,7 +41,7 @@ public class Customer {
     public Customer(int age, String state, Customer custumer) {
         this.setParent(custumer);
         this.age = age;
-        this.customer_id = UUID.randomUUID().toString();
+//        this.customer_id = UUID.randomUUID().toString();
 
         this.state = state;
     }

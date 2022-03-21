@@ -29,7 +29,7 @@ public class GivenWhiteBox {
     public void checkoutOneBear() {
         // One Student
         oneBear = new BearWorkshop("AZ");
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         double taxCost = oneBear.calculateTax(); // New Line of code
 
@@ -56,7 +56,7 @@ public class GivenWhiteBox {
     public void getCost_clothingTraversal() {
         // One Student
         oneBear = new BearWorkshop("AZ");
-        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear0 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         oneBear.addBear(testbear0);
 
@@ -97,7 +97,7 @@ public class GivenWhiteBox {
     public void getCost_clothingTraversal_with_ifBranch() {
         // One Student
         oneBear = new BearWorkshop("AZ");
-        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear0 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         oneBear.addBear(testbear0);
 
@@ -207,9 +207,9 @@ public class GivenWhiteBox {
     public void checkout_test1() {
         // One Student
         oneBear = new BearWorkshop("AZ");
-        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear0 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear2 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         oneBear.addBear(testbear0);
         oneBear.addBear(testbear1);
@@ -227,8 +227,8 @@ public class GivenWhiteBox {
     @Test
     public void remove_test1() {
         oneBear = new BearWorkshop("AZ");
-        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear0 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         oneBear.addBear(testbear0);
         oneBear.addBear(testbear1);
@@ -247,9 +247,9 @@ public class GivenWhiteBox {
     @Test
     public void remove_test2() {
         oneBear = new BearWorkshop();
-        Bear testbear0 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear1 = new Bear(Stuffing.stuffing.DOWN);// $41
-        Bear testbear2 = new Bear(Stuffing.stuffing.DOWN);// $41
+        Bear testbear0 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear1 = new Bear(Stuffing.Stuffs.DOWN);// $41
+        Bear testbear2 = new Bear(Stuffing.Stuffs.DOWN);// $41
 
         oneBear.addBear(testbear0);
         oneBear.addBear(testbear1);
