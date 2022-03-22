@@ -13,4 +13,11 @@ public class Casing {
         this.priceModifier = price;
         //this.description = descr;
     }
+    
+    public double getPriceModifier() {
+        return priceModifier;
+    }
+    public void setPriceModifier(double x) {
+        priceModifier = x;
+    }
 }

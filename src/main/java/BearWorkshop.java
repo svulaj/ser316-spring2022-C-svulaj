@@ -80,17 +80,13 @@ public class BearWorkshop implements BearWorkshopInterface {
         for (int i = 0; i < bear.clothing.size(); i++) {
             Clothing clothes = bear.clothing.get(i);
             bear.price += clothes.price;
-
         }
-
         for (NoiseMaker noise : bear.noisemakers) {
             bear.price += noise.price;
         }
-
         if (bear.ink != null) {
             bear.price += bear.ink.price;
         }
-
         bear.price += bear.stuff.price;
         bear.price += bear.casing.priceModifier;
 

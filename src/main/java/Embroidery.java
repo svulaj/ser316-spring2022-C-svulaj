@@ -12,4 +12,26 @@ public class Embroidery {
         this.embroidText = embroidery;
         this.price = embroidery.length() * pricePerLetter;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getEmbroidText() {
+        return embroidText;
+    }
+
+    public void setEmbroidText(String embroidText) {
+        this.embroidText = embroidText;
+    }
+
+    public static double getPriceperletter() {
+        return pricePerLetter;
+    }
+
+    
 }

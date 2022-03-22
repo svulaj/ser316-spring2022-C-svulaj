@@ -36,4 +36,7 @@ public class Clothing implements Comparable<Clothing> {
     public double getPrice() {
         return this.price;
     }
+    public void setPrice(double x) {
+        price = x;
+    }
 }

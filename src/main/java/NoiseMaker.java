@@ -37,4 +37,21 @@ public class NoiseMaker {
     public enum Location {
         RIGHT_HAND, LEFT_HAND, RIGHT_FOOT, LEFT_FOOT, CENTERBODY
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Location getSpot() {
+        return spot;
+    }
+
+    public void setSpot(Location spot) {
+        this.spot = spot;
+    }
+    
 }

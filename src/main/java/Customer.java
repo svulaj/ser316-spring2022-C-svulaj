@@ -54,5 +54,12 @@ public class Customer {
     public void setAge(int ageOfCusto) {
         age = ageOfCusto;
     }
+    
+    public String getState() {
+        return this.state;
+    }
+    public void setState(String x) {
+        this.state = x;
+    }
 
 }
