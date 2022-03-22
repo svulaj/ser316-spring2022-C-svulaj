@@ -17,15 +17,15 @@ public class Stuffing {
 
         switch (interiorStuffing) {
             case BASE:
-//                this.polyStuffing = Stuffs.BASE;
+                //this.polyStuffing = Stuffs.BASE;
                 this.price = 30;
                 break;
             case DOWN:
-//                this.polyStuffing = Stuffs.DOWN;
+                //this.polyStuffing = Stuffs.DOWN;
                 this.price = 40;
                 break;
             case FOAM:
-//                this.polyStuffing = Stuffs.FOAM;
+                //this.polyStuffing = Stuffs.FOAM;
                 this.price = 50;
                 break;
         }
