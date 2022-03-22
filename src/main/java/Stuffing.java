@@ -1,28 +1,31 @@
 package main.java;
 
 public class Stuffing {
-    public enum stuffing {
-        BASE,
-        DOWN,
-        FOAM
+    // changed stuffing to Stuffs
+    public enum Stuffs {
+        BASE, DOWN, FOAM
     }
-
-    stuffing polyStuffing;
+//    Never used, never read. Removing
+//    Stuffs polyStuffing;
     int price;
 
-    public Stuffing (stuffing interiorStuffing) {
+    /**
+     * Description: constructor for stuffing.
+     * @param interiorStuffing Is what the stuffing material is.
+     */
+    public Stuffing(Stuffs interiorStuffing) {
 
         switch (interiorStuffing) {
             case BASE:
-                this.polyStuffing = stuffing.BASE;
+//                this.polyStuffing = Stuffs.BASE;
                 this.price = 30;
                 break;
             case DOWN:
-                this.polyStuffing = stuffing.DOWN;
+//                this.polyStuffing = Stuffs.DOWN;
                 this.price = 40;
                 break;
             case FOAM:
-                this.polyStuffing = stuffing.FOAM;
+//                this.polyStuffing = Stuffs.FOAM;
                 this.price = 50;
                 break;
         }
