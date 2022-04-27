@@ -1,8 +1,8 @@
 package main.java;
 
 public interface BearWorkshopInterface {
-
-    public double getCost(Bear bear);
+    //METRICS 2 CHANGE
+    //public double getCost(Bear bear);
 
     public boolean addBear(Bear bear);
 

@@ -42,36 +42,36 @@ public class BearWorkshop implements BearWorkshopInterface {
      * @param bear to get cost of
      * @return double representation of bear cost TODO: Done.
      */
-
-    @Override
-    public double getCost(Bear bear) {
-        Collections.sort(bear.clothing);
-        int numFree = bear.clothing.size() / 3;
-        //Useless code. is never used, redundant. data goes in, never comes out to be used
-//        ArrayList<Clothing> freeClothes = new ArrayList<>();
-
-        for (int i = 0; i < bear.clothing.size(); i++) {
-            Clothing clothes = bear.clothing.get(i);
-            if (i < numFree) {
-//                freeClothes.add(clothes);
-            } else {
-                bear.price += clothes.price;
-            }
-        }
-
-        for (NoiseMaker noise : bear.noisemakers) {
-            bear.price += noise.price;
-        }
-
-        if (bear.ink != null) {
-            bear.price += bear.ink.price;
-        }
-
-        bear.price += bear.stuff.price;
-        bear.price += bear.casing.priceModifier;
-
-        return bear.price;
-    }
+//  METRICS 2 CHANGE
+//    @Override
+//    public double getCost(Bear bear) {
+//        Collections.sort(bear.clothing);
+//        int numFree = bear.clothing.size() / 3;
+//        //Useless code. is never used, redundant. data goes in, never comes out to be used
+////        ArrayList<Clothing> freeClothes = new ArrayList<>();
+//
+//        for (int i = 0; i < bear.clothing.size(); i++) {
+//            Clothing clothes = bear.clothing.get(i);
+//            if (i < numFree) {
+////                freeClothes.add(clothes);
+//            } else {
+//                bear.price += clothes.price;
+//            }
+//        }
+//
+//        for (NoiseMaker noise : bear.noisemakers) {
+//            bear.price += noise.price;
+//        }
+//
+//        if (bear.ink != null) {
+//            bear.price += bear.ink.price;
+//        }
+//
+//        bear.price += bear.stuff.price;
+//        bear.price += bear.casing.priceModifier;
+//
+//        return bear.price;
+//    }
 
     // Function to get the raw cost of a bear without any discounts
     // TODO: Done.
