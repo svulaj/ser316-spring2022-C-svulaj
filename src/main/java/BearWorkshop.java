@@ -263,6 +263,13 @@ public class BearWorkshop implements BearWorkshopInterface {
 
                     // prints the price of the clothing that is going to be added to totalSavings
                     System.out.println("individual savings for a bear is = " + indivSavings);
+                 //NEW FOR METRICS 2 - save 20% if you have x amount of clothes
+                }else if(numOfClothes % 2 == 0) {
+                    newSavingsMethod(totalSavings,.20);
+                    
+                 // NEW FOR METRICS 2 - save 40% if you have x amount of clothes
+                }else if(numOfClothes % 4 == 0) {
+                    newSavingsMethod(totalSavings,.40);
                 }
             }
             // adds the savings found to the total-saving calculations
@@ -363,6 +370,11 @@ public class BearWorkshop implements BearWorkshopInterface {
         System.out.println("total savings = " + totalSavings);
 
         return totalSavings;
+    }
+    
+    public static double newSavingsMethod(double value, double amountToSave) {
+        double newValueSavings = (value/amountToSave);
+        return newValueSavings;
     }
 
 }
