@@ -4,12 +4,12 @@ import main.java.Stuffing.Stuffs;
 import java.util.LinkedList;
 
 public class Bear implements Comparable<Bear> {
-    public Casing casing;
+    public Casing casing = new Casing();
     public Stuffing stuff;
-    public Embroidery ink;
-    public LinkedList<NoiseMaker> noisemakers; // accessory
-    public LinkedList<Clothing> clothing; // accessory
-    public double price;
+    public Embroidery ink = new Embroidery("");
+    public LinkedList<NoiseMaker> noisemakers = new LinkedList<>(); // accessory
+    public LinkedList<Clothing> clothing = new LinkedList<>();
+    public double price = 0;
     // bear has a shell (requ)
     // bear has stuffing (req)
     // bear has a tattoo/emroider or not (opt)
@@ -19,12 +19,7 @@ public class Bear implements Comparable<Bear> {
      * Bear object constructor. This creates a basic bear with. 
      */
     public Bear() {
-        this.casing = new Casing();
         this.stuff = new Stuffing(Stuffs.BASE);
-        noisemakers = new LinkedList<>();
-        clothing = new LinkedList<>();
-        ink = new Embroidery("");
-        price = 0;
     }
     /**
      * bear constructor with option for stuffing input.
@@ -32,12 +27,7 @@ public class Bear implements Comparable<Bear> {
      * @param stuff is the stuffing you put in the bear.
      */
     public Bear(Stuffs stuff) {
-        this.casing = new Casing();
         this.stuff = new Stuffing(stuff);
-        noisemakers = new LinkedList<>();
-        clothing = new LinkedList<>();
-        ink = new Embroidery("");
-        price = 0;
     }
 
     public void setPrice(double incomingPrice) {

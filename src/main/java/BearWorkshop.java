@@ -43,35 +43,35 @@ public class BearWorkshop implements BearWorkshopInterface {
      * @return double representation of bear cost TODO: Done.
      */
 //  METRICS 2 CHANGE
-//    @Override
-//    public double getCost(Bear bear) {
-//        Collections.sort(bear.clothing);
-//        int numFree = bear.clothing.size() / 3;
-//        //Useless code. is never used, redundant. data goes in, never comes out to be used
-////        ArrayList<Clothing> freeClothes = new ArrayList<>();
-//
-//        for (int i = 0; i < bear.clothing.size(); i++) {
-//            Clothing clothes = bear.clothing.get(i);
-//            if (i < numFree) {
-////                freeClothes.add(clothes);
-//            } else {
-//                bear.price += clothes.price;
-//            }
-//        }
-//
-//        for (NoiseMaker noise : bear.noisemakers) {
-//            bear.price += noise.price;
-//        }
-//
-//        if (bear.ink != null) {
-//            bear.price += bear.ink.price;
-//        }
-//
-//        bear.price += bear.stuff.price;
-//        bear.price += bear.casing.priceModifier;
-//
-//        return bear.price;
-//    }
+    @Override
+    public double getCost(Bear bear) {
+        Collections.sort(bear.clothing);
+        int numFree = bear.clothing.size() / 3;
+        //Useless code. is never used, redundant. data goes in, never comes out to be used
+//        ArrayList<Clothing> freeClothes = new ArrayList<>();
+
+        for (int i = 0; i < bear.clothing.size(); i++) {
+            Clothing clothes = bear.clothing.get(i);
+            if (i < numFree) {
+//                freeClothes.add(clothes);
+            } else {
+                bear.price += clothes.price;
+            }
+        }
+
+        for (NoiseMaker noise : bear.noisemakers) {
+            bear.price += noise.price;
+        }
+
+        if (bear.ink != null) {
+            bear.price += bear.ink.price;
+        }
+
+        bear.price += bear.stuff.price;
+        bear.price += bear.casing.priceModifier;
+
+        return bear.price;
+    }
 
     // Function to get the raw cost of a bear without any discounts
     // TODO: Done.
@@ -265,11 +265,11 @@ public class BearWorkshop implements BearWorkshopInterface {
                     System.out.println("individual savings for a bear is = " + indivSavings);
                  //NEW FOR METRICS 2 - save 20% if you have x amount of clothes
                 }else if(numOfClothes % 2 == 0) {
-                    newSavingsMethod(totalSavings,.20);
+                    totalSavings =  newSavingsMethod(totalSavings,.20);
                     
                  // NEW FOR METRICS 2 - save 40% if you have x amount of clothes
                 }else if(numOfClothes % 4 == 0) {
-                    newSavingsMethod(totalSavings,.40);
+                    totalSavings = newSavingsMethod(totalSavings,.40);
                 }
             }
             // adds the savings found to the total-saving calculations

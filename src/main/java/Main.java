@@ -22,15 +22,15 @@ public class Main {
 
         System.out.println(bear1.price);
         //METRICS 2 DELETION
-        //System.out.println(workshop.getCost(bear2));
+        System.out.println(workshop.getCost(bear2));
         //METRICS 2 REPLACEMENT
-        System.out.println(bear2.price);
+        //System.out.println(bear2.price);
 
         //METRICS 2 DELETION
-        //System.out.println(workshop.getCost(bear3));
+        System.out.println(workshop.getCost(bear3));
         
         //METRICS 2 REPLACEMENT
-        System.out.println(bear3.price);
+        //System.out.println(bear3.price);
         bear1.clothing.add(new Clothing());
 
         System.out.println("Bear with NO clothing object");
