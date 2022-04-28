@@ -33,6 +33,12 @@
     </properties>
 </rule>
 <rule ref="category/java/bestpractices.xml/LooseCoupling" />
-
-
+<rule ref="category/java/bestpractices.xml/UnusedImports" />
+<rule ref="category/java/bestpractices.xml/PreserveStackTrace" />
+<rule ref="category/java/codestyle.xml/DuplicateImports" />
+<rule ref="category/java/bestpractices.xml/SystemPrintln" />
+<rule ref="category/java/performance.xml/BooleanInstantiation" />
+<rule ref="category/java/errorprone.xml/BadComparison" />
+<rule ref="category/java/errorprone.xml/EqualsNull" />
+<rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings" />
 </ruleset>
